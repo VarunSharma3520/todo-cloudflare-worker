@@ -1,0 +1,42 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "test-cloudflare",
+	"main": "src/index.ts",
+	"compatibility_date": "2026-09-20",
+	// "compatibility_flags": [
+	//   "nodejs_compat"
+	// ],
+	// "vars": {
+	//   "MY_VAR": "my-variable"
+	// },
+	// "kv_namespaces": [
+	//   {
+	//     "binding": "MY_KV_NAMESPACE",
+	//     "id": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+	//   }
+	// ],
+	// "r2_buckets": [
+	//   {
+	//     "binding": "STORAGE",
+	//     "bucket_name": "todobucket"
+	//   }
+	// ],
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "tododb",
+			"database_id": "e7c2fecb-6a73-4af7-8a0d-ec77892754b3",
+			"migrations_dir":"drizzle"
+		}
+	],
+	"assets": {
+		"directory": "./public"
+	},
+	// "ai": {
+	//   "binding": "AI"
+	// },
+	// "observability": {
+	//   "enabled": true,
+	//   "head_sampling_rate": 1
+	// }
+}
